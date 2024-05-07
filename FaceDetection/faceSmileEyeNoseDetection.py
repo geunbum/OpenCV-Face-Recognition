@@ -10,17 +10,19 @@ import cv2
 # multiple cascades: https://github.com/Itseez/opencv/tree/master/data/haarcascades
 # faceCascade = cv2.CascadeClassifier를 사용해 'haarcascade_frontalface_default.xml'이라는 XML 파일을 사용하여
 # 정면 얼굴을 감지하는 카스케이드 분류기를 초기화 한다.
-# 카스케이드 분류기는 이미지나 비디오 프레임에서 얼굴을 감지하는 데 사용된다.
+# 카스케이드 분류기는 이미지나 비디오 프레임에서 얼굴을 감지하는데 사용된다.
 faceCascade = cv2.CascadeClassifier('Cascades/haarcascade_frontalface_default.xml')
 
 # 'haarcascade_eye.xml'이라는 XML 파일을 사용하여 눈을 감지하는 카스케이드 분류기를 초기화한다.
-# 이러한 카스케이드 분류기는 눈의 특징을 학습한 모델로, 이미지나 비디오 프레임에서 눈을 식별하는 데 사용된다.
+# 이러한 카스케이드 분류기는 눈의 특징을 학습한 모델로, 이미지나 비디오 프레임에서 눈을 식별하는데 사용된다.
 eyeCascade = cv2.CascadeClassifier('Cascades/haarcascade_eye.xml')
 
 # 'haarcascade_smile.xml'이라는 XML 파일을 사용하여 웃음을 감지하는 카스케이드 분류기를 초기화한다.
-# 이러한 카스케이드 분류기는 웃음의 특징을 학습한 모델로, 이미지나 비디오 프레임에서 웃음을 식별하는 데 사용된다.
+# 이러한 카스케이드 분류기는 웃음의 특징을 학습한 모델로, 이미지나 비디오 프레임에서 웃음을 식별하는데 사용된다.
 smileCascade = cv2.CascadeClassifier('Cascades/haarcascade_smile.xml')
 
+# 'haarcascade_mcs_nose 복사본.xml'이라는 XML 파일을 사용하여 코을 감지하는 카스케이드 분류기를 초기화한다.
+# 이러한 카스케이드 분류기는 코의 특징을 학습한 모델로, 이미지나 비디오 프레임에서 웃음을 식별하는데 사용된다.
 noseCascade = cv2.CascadeClassifier('Cascades/haarcascade_mcs_nose 복사본.xml')
 
 # 인덱스 0에 해당하는 비디오 캡처 장치를 연다는 의미이다. 일반적으로 이것은 컴퓨터에 연결된 첫 번째 웹캠을 가르킨다.
